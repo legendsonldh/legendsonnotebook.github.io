@@ -98,4 +98,11 @@ $$
 \begin{align}\ln L(\theta)&=-\frac{n}{2}\cdot\ln(2\pi\sigma^2)-\sum_{i=1}^{n}\frac{(x_i-\mu)^2}{2\sigma^2}\end{align}
 $$
 
-我们令$\mu=\theta_1$，$\sigma^2=\theta_2$，我们需要对（16）式求偏导，即分别对$\theta$中的所有参数求导，并求解参数方程，求导后如下：
+我们令$\mu=\theta_1$，$\sigma^2=\theta_2$，我们需要对（16）式求偏导，即分别对$\theta$中的所有参数求导，并求解参数方程，求导后如下所示：
+
+$$
+\begin{align}\begin{cases} 
+\frac{\partial\ln L(\theta)}{\partial \theta_1} = \frac{1}{\theta_2}(\ln2\pi+\ln\theta_2)\sum_{i=1}^{n}(x_i-\theta_1)=0\\
+\frac{\partial\ln L(\theta)}{\partial \theta_2} = -\frac{n}{2\theta_2}+\frac{1}{2\theta_2^2}\sum_{i=1}^{n}(x_i-\theta_1)^2=0 
+\end{cases}\end{align}
+$$
