@@ -1,0 +1,11 @@
+/* 使用自定义字体 */
+@font-face {
+    font-family: 'Chinese_body'; /* 可以是您喜欢的名称 */
+    src: url('../_fonts/LXGWWenKaiGBScreen.ttf') format('ttf')
+    /* 添加其他字体格式，如果有的话 */
+}
+
+/* 修改文档中的字体样式 */
+body {
+    font-family: 'Chinese_body', sans-serif; /* 使用您定义的字体 */
+}
