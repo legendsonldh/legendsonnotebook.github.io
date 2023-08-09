@@ -25,12 +25,13 @@
   <script>
     window.$docsify = {
         name: '笔记本',
-        repo: '',
+        repo: 'https://github.com/legendsonldh/notebook',
+        logo:'_media/favicon.ico',
         loadSidebar: true,
         count:{
             countable:true,
             fontsize:'0.9em',
-            color:'rgb(90,90,90)',
+            color:'rgb(0,90,90)',
             language:'chinese'
         },
         coverpage: true,
@@ -51,6 +52,11 @@
             nextText: '下一章节',
             crossChapter: true,
             crossChapterText: true,
+        },
+        timeUpdater: {
+            text: ">最后更新时间: {docsify-updated}",
+            formatUpdated: "{YYYY}/{MM}/{DD}",
+            whereToPlace: "top",  // "top" or "bottom", default to "bottom"
         },
     }
   </script>
@@ -76,5 +82,9 @@
           type="text/javascript">
   </script>
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink@1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-updated/src/time-updater.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-sign-off-sheet"></script>
 </body>
 </html>
