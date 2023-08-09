@@ -102,7 +102,76 @@ $$
 
 $$
 \begin{align}\begin{cases} 
-\frac{\partial\ln L(\theta)}{\partial \theta_1} = \frac{1}{\theta_2}(\ln2\pi+\ln\theta_2)\sum_{i=1}^{n}(x_i-\theta_1)=0\\
-\frac{\partial\ln L(\theta)}{\partial \theta_2} = -\frac{n}{2\theta_2}+\frac{1}{2\theta_2^2}\sum_{i=1}^{n}(x_i-\theta_1)^2=0 
+\frac{\partial\ln L(\theta)}{\partial \theta_1} = \frac{1}{\theta_2}(\ln2\pi+\ln\theta_2)\sum_{i=1}^{n}(x_i-\theta_1)=0\\\frac{\partial\ln L(\theta)}{\partial \theta_2} = -\frac{n}{2\theta_2}+\frac{1}{2\theta_2^2}\sum_{i=1}^{n}(x_i-\theta_1)^2=0
 \end{cases}\end{align}
 $$
+
+求解式（17）可得$\theta$的值，如下所示，是不是和我们的直觉很像呢？
+
+$$
+\begin{align}\begin{cases} \theta_1 = \mu = \frac{1}{n} \sum_{i=1}^{n} x_i \\ \theta_2 = \sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (x_i-\theta_1)^2 \\ \end{cases}\end{align}
+$$
+
+### 其他分布
+
+分布并非唯一，在我们遇到的情况中和实际面对的情况中，很多时候都是不同分布或者分布之间的组合，那么求解我们假设的极大似然估计成为了解题的关键：
+
+
+
+#### 泊松分布
+
+假设我们有独立同分布的观测数据集 $X = {x_1, x_2, \ldots, x_n}$，其服从泊松分布 $\text{Poisson}(\lambda)$。我们要估计参数 $\lambda$。
+
+似然函数：$L(\lambda | X) = \prod_{i=1}^{n} \frac{e^{-\lambda} \lambda^{x_i}}{x_i!}$
+
+对数似然函数：$l(\lambda | X) = \sum_{i=1}^{n} (-\lambda + x_i \ln(\lambda) - \ln(x_i!))$
+
+通过最大化对数似然函数，可以得到参数 $\lambda$ 的估计：
+
+
+$$
+\begin{align}\hat{\lambda} = \frac{1}{n} \sum_{i=1}^{n} x_i\end{align}
+$$
+
+#### 指数分布
+
+假设我们有独立同分布的观测数据集 $X = {x_1, x_2, \ldots, x_n}$，其服从指数分布 $\text{Exp}(\lambda)$。我们要估计参数 $\lambda$。
+
+似然函数：$L(\lambda | X) = \prod_{i=1}^{n} \lambda e^{-\lambda x_i}$
+
+对数似然函数：$l(\lambda | X) = n \ln(\lambda) - \lambda \sum_{i=1}^{n} x_i$
+
+通过最大化对数似然函数，可以得到参数 $\lambda$ 的估计：
+
+
+$$
+\begin{align}\hat{\lambda} = \frac{n}{\sum_{i=1}^{n} x_i}\end{align}
+$$
+
+
+
+## 拓展
+
+我们从上述其他分布的思路出发，思考一个问题，当我们的样本中混合了总多的分布情况时，我们该如何将每个分布区分开来呢？这是一个好问题，我们可以考虑ME的方案：
+
+
+
+**最大熵（Maximum Entropy, ME）**
+
+最大熵是一种信息论和统计学概念，用于从已知的约束条件中找到一个概率分布，使得该分布的熵（不确定性）最大。在给定一些信息或约束条件下，最大熵原理选择了满足这些条件的最均匀的分布，即最小偏见的分布。
+
+
+
+实际操作的部分较为复杂，这里将不做展开
+
+
+
+## 参考资料
+
+1. [一文搞懂极大似然估计 -知乎](https://zhuanlan.zhihu.com/p/26614750)
+
+2. [通俗理解极大似然估计](https://zhuanlan.zhihu.com/p/334890990)
+
+3. [Maximum Likelihood Estimation(MLE) 极大似然估计](https://zhuanlan.zhihu.com/p/163258672)
+
+
