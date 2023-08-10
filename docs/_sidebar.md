@@ -1,2 +1,5 @@
 - 数学基础
-  - [极大似然估计](base/极大似然估计MLE.md)
+  - [极大似然估计](content/math/极大似然估计MLE.md)
+- 编程语言
+  - Go
+    - [Go的坑](content/programming_language/Hole_in_Go.md)
