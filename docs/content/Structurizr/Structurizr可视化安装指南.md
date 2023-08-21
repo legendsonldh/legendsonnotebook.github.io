@@ -33,7 +33,7 @@ structurizr工具是用于画架构的，这种架构不同于一般的软件架
 
 ```bash
 docker pull structurizr/onpremises
-docker run -it --rm -p 8080:8080 -v PATH:/usr/local/structurizr structurizr/onpremises
+docker --restart always --detach --rm -p 8080:8080 -v PATH:/usr/local/structurizr structurizr/onpremises
 ```
 
 Docker部署后访问对应端口即可，初始账户和密码如下：
