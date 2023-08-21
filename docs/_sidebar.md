@@ -11,3 +11,5 @@
     - [Docker运维](content/Docker/Docker运维.md)
     - [Docker中安装GitLab](content/Docker/Docker中安装GitLab.md)
     - [Docker文件交换](content/Docker/Docker文件交换.md)
+  - Structurizr
+    - [structurizr可视化安装指南](content/Structurizr/Structurizr可视化安装指南.md)
