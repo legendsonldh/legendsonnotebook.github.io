@@ -13,6 +13,10 @@ structurizr工具是用于画架构的，这种架构不同于一般的软件架
 
 ![C4Model](https://c4model.com/img/c4-overview.png)
 
+这里再给出一个链接，是我认为C4 Model最好的一个范例：
+
+[Big Bank plc - Internet Banking System](https://structurizr.com/share/36141/)
+
 但是 C4 Model是理论上对相关的架构进行了定义，我们还需要能够实现的工具，经过比较，我选择了Structurizr工具，该工具的理念为All in Code，即使用代码生成图片。
 
 ## Structurizr
