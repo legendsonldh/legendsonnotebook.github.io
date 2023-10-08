@@ -20,5 +20,7 @@
     - [从Pyside6说起](content/PyQt/Pyside6.md)
   - GUI
     - [PyQt主题选择](content/PyQt/PyQt主题选择.md)
+- Flutter
+  - [QA](content/Flutter/Flutter的QA.md)
 
    
