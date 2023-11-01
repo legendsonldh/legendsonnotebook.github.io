@@ -9,7 +9,7 @@ PS：Nignx和Nps工具目前好像看起来没那么兼容，原因是在于Ngin
 
 [NPS工具Github主页](https://github.com/ehang-io/nps)
 
-[官方文档](https://ehang-io.github.io)
+[官方文档](https://ehang-io.github.io/nps/#/)
 
 由于文档中写的非常的详细，我这里就做简要总结：
 
